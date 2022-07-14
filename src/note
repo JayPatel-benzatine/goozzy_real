@@ -1,0 +1,113 @@
+start gozzy
+-create responsive header
+-create responsive navbar
+-add side menu
+-add cart with badges
+-create responsive carousel
+
+
+*****
+Add hover effect on cart
+Add underline-hover on dropdown menu list
+completed navbar
+completed carousel form responsive 
+addd footer 
+create footer responsiveness
+add scroll button to rest scroll top 
+
+
+
+*********
+-create categories component of home page
+-add hover effect
+-add responnsive style 
+-completed categories component
+-create teand banner component with fix  background imge add style
+-create trending deals component
+-add style 
+-make responsive
+
+***
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+
+
+
+-create media qurries for diffrent devis
+change comman class
+-fliping img
+-solve responsive error
+-create catelog component
+-add aimation librery
+-add responsive to catelog component
+-created about-us page 
+-add style
+-add navigation
+-completed about-us page with responsiveness
+
+
+-add dynamic pathname to comman component
+-create contact-us page
+-add google map 
+-created from 
+-add styling
+-add responsiveness
+-add active class styling in navbar 
+-create profile page 
+
+--complete upload image 
+-add responsive  to profile page
+-complete profile page
+-create bank-detail page
+-add styling
+-completed bank-details pages
+-create address page
+-add styling
+-add responsivness
+
+-created notifcication page
+-created notifcication component
+-dispaly list
+-add styling
+-create responsiveness
+-add onsroll button at diffrent pages 
+-R&d on animation librey
+-animation on scroll and carousel button
+-complete country-state-city dropdown 
+
+-spliting values from template litrales
+- R&D on js Array method
+- create comman selector 
+-add hover effect i lst item
+-R&D on how to apply multiple filter
+
+-start up recoil state management tool
+-integrate with api
+-creatte special product component
+-create card component
+-fetch product from api
+-display cards
+-apply filter according to category
+
+-fix warning of different page
+-crate sale and offer component
+-filter Offer  as per api
+-add hover animation for cart and fav icon
+-add animation
+-fixing animation problem
+
+-make product-component responsive
+-conect home page data to api for changing staic data to dynamic
+-add api data to navbar list
+-add api data to home page cards
+-add api data to home page Slider
+-add api data to home page trending deals
+-add api data to home page Special Products
+-create category component with static data
+
+-create category component with API data
+-Make responsive 
+-create detail component 

@@ -110,4 +110,41 @@ change comman class
 
 -create category component with API data
 -Make responsive 
+-fixing error
 -create detail component 
+-add staic data
+-create slider
+-make slider responsive
+
+
+-Add detail contains
+-create incr dec butom dynamic
+-add styling
+-make detail cobtains responsivr
+-create review contain 
+-add progress bar and rating 
+-create review section
+-make responsive 
+
+-change staic data to dyanmic data from api
+-fix error to display api size & color
+-display review data from backend
+-completed product detail page 
+-complete cancel form event with prop drilling
+-fixing error
+
+
+- created shop component
+- create filter component
+- create list component
+- add styling
+- add hover animation
+- add static data 
+- make component responsive 
+- fetch api data add to list component
+- complete filter => sort by price, new arrival
+
+-add api data to category filter componet
+-complete filter with category list
+-add react suspence for loading
+-add reset filter functionality

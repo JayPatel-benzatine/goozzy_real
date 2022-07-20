@@ -1,5 +1,6 @@
 import { selector } from "recoil";
 import axios from "axios";
+import {headerList} from './Atom'
 
 const url1 = `http://ecommerceapi.benzatine.com/public/api/special_product`;
 const fetchUserData = selector({
@@ -54,19 +55,34 @@ const SliderLists= selector({
   }
 });
 
-// // const url5 = `http://ecommerceapi.benzatine.com/public/api/category_list/5`;
-// const CategoryLists= selector({
-//   key: "CategoryLists",
-//   get: async ({ get }) => {
-//     const categor = get(CategoryList);
-//     const id =categor.id;
-//     try {
-//       const response = await axios.get(`http://ecommerceapi.benzatine.com/public/api/category_list/${id}`);
-//       return response.data.data;
-//     } catch (error) {
-//       throw error;
-//     }
-//   }
-// });
+const url5 = `http://ecommerceapi.benzatine.com/public/api/product_filter`;
+const ShopfilterLists= selector({
+  key: "ShopfilterLists",
+  get: async ({get}) => {
+    try {
+       const data= get(headerList)
+      const response = await axios.post(url5,data)
+      return response.data.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+});
 
-export {fetchUserData,categoreyLists,TrendOfferLists,SliderLists};
+
+const url6 = `http://ecommerceapi.benzatine.com/public/api/allCategory_list`;
+const ShopCategoryLists= selector({
+  key: "ShopCategoryLists",
+  get: async ({ get }) => {
+    try {
+      const response = await axios.get(url6);
+      return response.data.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+});
+
+
+export {fetchUserData,categoreyLists,TrendOfferLists,
+        SliderLists,ShopfilterLists,ShopCategoryLists}

@@ -11,12 +11,14 @@ import Address from './pages/Address'
 import Notification from './pages/Notification'
 import Categories from './pages/Categories';
 import ProductsDetails from './pages/ProductsDetails'
+import Shops from './pages/Shops'
 const App = () => {
   return (
     <div className='app_main'>
     <Routes>
       <Route path='/'  element={<Home />}/>
-      <Route path='/productDetails'  element={<ProductsDetails />}/>
+      <Route path='/shop'  element={<Shops />}/>
+      <Route path='/productDetails/:id'  element={<ProductsDetails />}/>
       <Route path='/category/:name/:id'  element={<Categories />}/>
       <Route path='/profile'  element={<Profile />}/>
       <Route path='/bank'  element={<Bank />}/>

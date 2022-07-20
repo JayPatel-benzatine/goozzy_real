@@ -80,7 +80,7 @@ const SpecialCard = () => {
                                                 <span className={elm.isonsale === '1' ? "lable4 ng-star-inserted  " : 'd-none'}>on sale</span>
                                             </div>
                                             <div className="front">
-                                                <Link to="/productDetails" >
+                                                <Link to={`/productDetails/${elm.id}`} >
                                                     <img key={i} className="img-fluid lazy-loading  ng-star-inserted ng-lazyloaded"
                                                         src={elm.productImages[0].name} />
                                                 </Link>

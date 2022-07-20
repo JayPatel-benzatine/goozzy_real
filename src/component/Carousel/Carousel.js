@@ -26,7 +26,7 @@ const Carousel = () => {
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
                     {
-                        slideData.map((elm) => {
+                        slideData.map((elm,i) => {
                             return (<>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="2000">

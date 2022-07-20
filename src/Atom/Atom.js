@@ -15,12 +15,24 @@ const categoreyList = atom({
 });
 const TrendOfferList = atom({
     key: 'TrendOfferList',
-    default: []
+    default: [],
 });
 const SliderList = atom({
     key: 'SliderList',
-    default: []
+    default: [],
+});
+const FilterProductList = atom({
+    key: 'FilterProductList',
+    default: [],
+});
+
+const headerList = atom({
+    key: 'headerList',
+    default: {
+        priceRang1: '0',
+        priceRang2: '5000',
+    }
 });
 
 
-export { specialProduct,filterProduct,categoreyList,TrendOfferList,SliderList };
+export { specialProduct, filterProduct, categoreyList, TrendOfferList, SliderList, FilterProductList, headerList };

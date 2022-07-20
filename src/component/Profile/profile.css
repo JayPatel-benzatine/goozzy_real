@@ -6,7 +6,6 @@
     height: 2px;
     width: 70px;
     background-color: #7165E3;
-    background-color: var(--theme-deafult);
     content: "";
     left: 0;
     right: 0;

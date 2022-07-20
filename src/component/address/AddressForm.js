@@ -2,21 +2,20 @@ import React, { useEffect, useState } from 'react'
 import './address.css'
 import { Country, State, City } from 'country-state-city';
 
-const AddressForm = () => {
+const AddressForm = ({statesClose}) => {
     const [countryCode, setCountryCode] = useState([])
     const [stateCode, setStateCode] = useState([])
     const [comman, setComman] = useState([])
-     const [country, setCountry] = useState([]) 
-
+     
     const S_country = Country.getAllCountries()
     const S_state = State.getStatesOfCountry(countryCode)
     const S_city = City.getCitiesOfState(countryCode, stateCode)
-    console.log(S_country);
+    // console.log(S_country);
 
     useEffect(() => {
 
       if (comman.length > 1) setCountryCode(comman)
-
+// eslint-disable-next-line
     }, [comman, countryCode])
 
     const Get_country = (e) => {
@@ -159,7 +158,7 @@ const AddressForm = () => {
                     </div>
                     <div className="col-6 ">
                         <button type="submit" className="btn f_btn"
-                            onClick={cancelForm}
+                            onClick={statesClose}
                         >cancel</button>
                     </div>
                 </div>

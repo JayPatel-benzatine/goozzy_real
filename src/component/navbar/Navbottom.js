@@ -45,7 +45,7 @@ const NavBottom = () => {
                                     </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">SHOP</a>
+                                    <Link className="nav-link" to="/shop">SHOP</Link>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
@@ -53,14 +53,16 @@ const NavBottom = () => {
                                     </a>
                                     <ul className="dropdown-menu fade-up" >
                                         {
-                                            category.map((elm) => {
+                                            category.map((elm, i) => {
                                                 return (
                                                     <>
-                                                        <li key={elm.id}><Link className="dropdown-item " to={`/category/${elm.name}/${elm.id}`}>{elm.name}</Link></li>
+                                                        <div className="" key={Math.random().toString(36).substr(2, 9)}>
+                                                            <li><Link className="dropdown-item " to={`/category/${elm.name}/${elm.id}`}>{elm.name}</Link></li>
+                                                        </div>
                                                     </>)
                                             })
                                         }
-                                        </ul>
+                                    </ul>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">

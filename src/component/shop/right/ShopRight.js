@@ -9,31 +9,94 @@ const ShopRight = () => {
   const [Post_filter_list, setPost_filter_list] = useRecoilState(headerList);
   const filterlist = useRecoilValue(ShopfilterLists);
 
+
   const changeProduct = (e) => {
     let a = e.target.value;
+    switch (a) {
+      case '1':
+        if (Post_filter_list.hasOwnProperty('price')) {
+          const prop = 'price'
+          const newValue = Object.keys(Post_filter_list).reduce((object, key) => {
+            if (key !== prop) {
+              object[key] = Post_filter_list[key]
+            }
+            return object
+          }, {})
+          const d = Object.assign(newValue, { newarrival: a });
+          console.log(d);
+          setPost_filter_list(d)
+        } else {
+          setPost_filter_list({ ...Post_filter_list, newarrival: a });
+        }
+        break;
 
-    if (a === '1') {
-      const { price, ...rests } = Post_filter_list;
-      console.log(rests);
-      setPost_filter_list({ rests, newarrival: a });
-    } else if (a === 'sort') {
-      const { newarrival, price, ...restsort } = Post_filter_list;
-      console.log(restsort);
-      setPost_filter_list(restsort);
-    } else {
-      if (a === 'ASC') {
-        const { newarrival, ...rest } = Post_filter_list;
-        console.log(rest);
-        setPost_filter_list({ rest, price: a });
-      } else {
-        const { newarrival, ...restts } = Post_filter_list;
-        console.log(restts);
-        setPost_filter_list({ restts, price: a });
-      }
+      case 'sort':
+        if (Post_filter_list.hasOwnProperty('price')) {
+          const prop = 'price'
+          const newValue = Object.keys(Post_filter_list).reduce((object, key) => {
+            if (key !== prop) {
+              object[key] = Post_filter_list[key]
+            }
+            return object
+          }, {})
+          setPost_filter_list(newValue)
+        } else {
+          const prop = 'newarrival'
+          const newValue = Object.keys(Post_filter_list).reduce((object, key) => {
+            if (key !== prop) {
+              object[key] = Post_filter_list[key]
+            }
+            return object
+          }, {})
+          setPost_filter_list(newValue)
+        }
+        break;
+
+      case 'ASC':
+        if (Post_filter_list.hasOwnProperty('newarrival')) {
+          console.log('n');
+          const prop = 'newarrival'
+          const newValue = Object.keys(Post_filter_list).reduce((object, key) => {
+            if (key !== prop) {
+              object[key] = Post_filter_list[key]
+            }
+            return object
+          }, {})
+          const d = Object.assign(newValue, { price: a });
+          console.log(d);
+          setPost_filter_list(d)
+        } else {
+          setPost_filter_list({ ...Post_filter_list, price: a });
+        }
+        break;
+
+      case 'DESC':
+        if (Post_filter_list.hasOwnProperty('newarrival')) {
+          const prop = 'newarrival'
+          const newValue = Object.keys(Post_filter_list).reduce((object, key) => {
+            if (key !== prop) {
+              object[key] = Post_filter_list[key]
+            }
+            return object
+          }, {})
+          const d = Object.assign(newValue, { price: a });
+          console.log(d);
+          setPost_filter_list(d)
+        } else {
+          console.log('s');
+          setPost_filter_list({ ...Post_filter_list, price: a });
+        }
+        break;
+
+      default:
+        break;
     }
   }
+
+  console.log(Post_filter_list);
+
   return (
-    <div>
+    <>
       <div className="right_heading ">
         <div className="head_right">
           <span className='ms-2 head_show'>showing 1-20 of products</span>
@@ -48,7 +111,7 @@ const ShopRight = () => {
         </div>
       </div>
       <Fliter list={filterlist} />
-    </div>
+    </>
   )
 }
 

@@ -82,7 +82,19 @@ const ShopCategoryLists= selector({
     }
   }
 });
+const url7 = `http://ecommerceapi.benzatine.com/public/api/variant`;
+const ShopColorLists= selector({
+  key: "ShopColorLists",
+  get: async ({ get }) => {
+    try {
+      const response = await axios.get(url7);
+      return response.data.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+});
 
 
 export {fetchUserData,categoreyLists,TrendOfferLists,
-        SliderLists,ShopfilterLists,ShopCategoryLists}
+        SliderLists,ShopfilterLists,ShopCategoryLists,ShopColorLists}

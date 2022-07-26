@@ -9,6 +9,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import FaxIcon from '@mui/icons-material/Fax';
+import { Link } from 'react-router-dom';
 const FooterBottom = () => {
   return (
     <div>
@@ -28,11 +29,11 @@ const FooterBottom = () => {
                 <p className='footer_paragrah'>Goozzy is the ultimate destination for fashion and lifestyle. It is time to redefine your style statement with our treasure-trove of trendy items. You can shop online at Goozzy from the comfort of your home and get your favourites delivered right to your doorstep.</p>
 
                 <div className="footer-social">
-                  <p> <a href="#"><FacebookIcon className='icon' /></a></p>
-                  <p> <a href="#"><GoogleIcon className='icon' /></a></p>
-                  <p> <a href="#"><TwitterIcon className='icon' /></a></p>
-                  <p> <a href="#"><InstagramIcon className='icon' /></a></p>
-                  <p><a href="#"><RssFeedIcon className='icon' /></a></p>
+                  <p> <Link to="#"><FacebookIcon className='icon' /></Link></p>
+                  <p> <Link to="#"><GoogleIcon className='icon' /></Link></p>
+                  <p> <Link to="#"><TwitterIcon className='icon' /></Link></p>
+                  <p> <Link to="#"><InstagramIcon className='icon' /></Link></p>
+                  <p><Link to="#"><RssFeedIcon className='icon' /></Link></p>
 
                 </div>
               </div>
@@ -45,13 +46,13 @@ const FooterBottom = () => {
                 </div>
                 <div className="footer-content">
                   <p>
-                    <a href="#!" className="text-reset">Womens Fashion</a>
+                    <Link to="#!" className="text-reset">Womens Fashion</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Mens Fashion</a>
+                    <Link to="#!" className="text-reset">Mens Fashion</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Kids Fashion</a>
+                    <Link to="#!" className="text-reset">Kids Fashion</Link>
                   </p>
                 </div>
               </div>
@@ -64,19 +65,19 @@ const FooterBottom = () => {
                 </div>
                 <div className="footer-content">
                   <p>
-                    <a href="#!" className="text-reset">shipping & return</a>
+                    <Link to="#!" className="text-reset">shipping & return</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">secure shopping</a>
+                    <Link to="#!" className="text-reset">secure shopping</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">gallary</a>
+                    <Link to="#!" className="text-reset">gallary</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">affiliates</a>
+                    <Link to="#!" className="text-reset">affiliates</Link>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">contacts</a>
+                    <Link to="#!" className="text-reset">contacts</Link>
                   </p>
                 </div>
               </div>

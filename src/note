@@ -5,36 +5,34 @@ start gozzy
 -add cart with badges
 -create responsive carousel
 
+---
 
-*****
 Add hover effect on cart
 Add underline-hover on dropdown menu list
 completed navbar
-completed carousel form responsive 
-addd footer 
+completed carousel form responsive
+addd footer
 create footer responsiveness
-add scroll button to rest scroll top 
+add scroll button to rest scroll top
 
+---
 
-
-*********
 -create categories component of home page
 -add hover effect
--add responnsive style 
+-add responnsive style
 -completed categories component
--create teand banner component with fix  background imge add style
+-create teand banner component with fix background imge add style
 -create trending deals component
--add style 
+-add style
 -make responsive
 
-***
+---
+
 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV
-
-
 
 -create media qurries for diffrent devis
 change comman class
@@ -43,23 +41,22 @@ change comman class
 -create catelog component
 -add aimation librery
 -add responsive to catelog component
--created about-us page 
+-created about-us page
 -add style
 -add navigation
 -completed about-us page with responsiveness
 
-
 -add dynamic pathname to comman component
 -create contact-us page
--add google map 
--created from 
+-add google map
+-created from
 -add styling
 -add responsiveness
--add active class styling in navbar 
--create profile page 
+-add active class styling in navbar
+-create profile page
 
---complete upload image 
--add responsive  to profile page
+--complete upload image
+-add responsive to profile page
 -complete profile page
 -create bank-detail page
 -add styling
@@ -73,16 +70,17 @@ change comman class
 -dispaly list
 -add styling
 -create responsiveness
--add onsroll button at diffrent pages 
+-add onsroll button at diffrent pages
 -R&d on animation librey
 -animation on scroll and carousel button
--complete country-state-city dropdown 
+-complete country-state-city dropdown
 
 -spliting values from template litrales
+
 - R&D on js Array method
-- create comman selector 
--add hover effect i lst item
--R&D on how to apply multiple filter
+- create comman selector
+  -add hover effect i lst item
+  -R&D on how to apply multiple filter
 
 -start up recoil state management tool
 -integrate with api
@@ -94,7 +92,7 @@ change comman class
 
 -fix warning of different page
 -crate sale and offer component
--filter Offer  as per api
+-filter Offer as per api
 -add hover animation for cart and fav icon
 -add animation
 -fixing animation problem
@@ -109,38 +107,36 @@ change comman class
 -create category component with static data
 
 -create category component with API data
--Make responsive 
+-Make responsive
 -fixing error
--create detail component 
+-create detail component
 -add staic data
 -create slider
 -make slider responsive
-
 
 -Add detail contains
 -create incr dec butom dynamic
 -add styling
 -make detail cobtains responsivr
--create review contain 
--add progress bar and rating 
+-create review contain
+-add progress bar and rating
 -create review section
--make responsive 
+-make responsive
 
 -change staic data to dyanmic data from api
 -fix error to display api size & color
 -display review data from backend
--completed product detail page 
+-completed product detail page
 -complete cancel form event with prop drilling
 -fixing error
-
 
 - created shop component
 - create filter component
 - create list component
 - add styling
 - add hover animation
-- add static data 
-- make component responsive 
+- add static data
+- make component responsive
 - fetch api data add to list component
 - complete filter => sort by price, new arrival
 
@@ -148,3 +144,33 @@ change comman class
 -complete filter with category list
 -add react suspence for loading
 -add reset filter functionality
+-solving filter overrife problem
+
+-create color filter component
+-add styling
+-fetch and display api data to color component
+-created size filter component
+-add styling
+-fetch and display api data to size component
+-adding filter functionality
+-sovling error
+
+-completed multiple filter functionality for :
+>color component
+>size component
+>categorey component
+>component
+-restructed responsive styling
+-create slider component
+-and filter component to slider 
+-apply filter function
+
+
+-fix carousel hover issues
+-fix filter responcive loading component
+-create no recordfound component
+-add styling
+-add navigation-link to cards component of home page to redirect to shop and filter page
+-create cart component
+-perform add to cart from different pages
+-perform cart operation for delete,total,quantity

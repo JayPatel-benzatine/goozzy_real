@@ -9,6 +9,7 @@ const Address = () => {
         <div className='container maps'>
             <div className="add_left mb-5">
                 <iframe
+                 title="Google_map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9805239890816!2d72.83374197990189!3d21.23262088623114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04ec5b19d0e3f%3A0x5b70a36a0e8752c6!2sBenzatine%20Infotech!5e0!3m2!1sen!2sin!4v1657001497909!5m2!1sen!2sin"
                     width="700" height="450"
                     style={{ borderRadius: '15px'}}

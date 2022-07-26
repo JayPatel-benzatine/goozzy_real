@@ -3,6 +3,7 @@ import './Navtop.css'
 import PhoneIcon from '@mui/icons-material/Phone';
 import Search from './Search'
 import PersonIcon from '@mui/icons-material/Person';
+import { Link } from 'react-router-dom';
 const NavTop = () => {
     return (
         <header className="top_header bg-light">
@@ -19,7 +20,7 @@ const NavTop = () => {
                             <span>My Account</span>
                         </div>
                         <ul className="dropdown-menu fade-up">
-                            <li><a className="dropdown-item" href="#"> Log In</a></li>
+                            <li><Link className="dropdown-item" to="#"> Log In</Link></li>
                         </ul>
                     </div>
                 </div>

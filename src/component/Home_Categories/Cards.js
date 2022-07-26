@@ -1,9 +1,11 @@
 import React from 'react'
 import './Cards.css'
-import { categoreyList } from '../../Atom/Atom'
-import { useRecoilValue } from 'recoil'
+import { categoreyList,headerList } from '../../Atom/Atom'
+import { useRecoilValue,useRecoilState } from 'recoil'
+import { Link } from 'react-router-dom'
 const Cards = () => {
     const Category_data = useRecoilValue(categoreyList)
+    const [upAtom,setUpAtom] = useRecoilState(headerList)
     return (
         <>
             <div className="h_cards">
@@ -16,7 +18,7 @@ const Cards = () => {
                                         <img alt="" className="img-fluid" src={elm.image} />
                                     </div>
                                     <div className="category-box">
-                                        <a href="#"> <h2>{elm.name}</h2>  </a>
+                                        <Link to="/shop" onClick={()=>setUpAtom({...upAtom,category_id:elm.id})}> <h2>{elm.name}</h2></Link>
                                     </div>
                                 </div>
                             </>
@@ -29,21 +31,21 @@ const Cards = () => {
             <div className="h_card">
                 <div className="category-ban">
                     <div>
-                        <a href="#"><img alt="" className="img-fluids" src={require('../../assets/card4.jpeg')} /> </a>
+                        <Link to="/shop" onClick={()=>setUpAtom({...upAtom,category_id:'fashion'})}><img alt="" className="img-fluids" src={require('../../assets/card4.jpeg')} /> </Link>
                     </div>
                     <div className="category-boxs">
                         <h6>SAVE 30%</h6>
-                        <h3>FOOTWEAR</h3>
+                        <Link to="/shop" onClick={()=>setUpAtom({...upAtom,category_id:'fashion'})}><h3>FOOTWEAR</h3></Link>
                     </div>
                 </div>
 
                 <div className="category-ban">
                     <div>
-                        <a href="#"><img alt="" className="img-fluids" src={require('../../assets/card5.jpeg')} />  </a>
+                        <Link to="/shop" onClick={()=>setUpAtom({...upAtom,category_id:'fashion'})}><img alt="" className="img-fluids" src={require('../../assets/card5.jpeg')} />  </Link>
                     </div>
                     <div className="category-boxs">
                         <h6>SAVE 50%</h6>
-                        <h3>WATCHES</h3>
+                        <Link to="/shop" onClick={()=>setUpAtom({...upAtom,category_id:'fashion'})}><h3>WATCHES</h3></Link>
                     </div>
                 </div>
 

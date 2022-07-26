@@ -14,7 +14,7 @@ import Rating from '../Rating/Rating'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import StarIcon from '@mui/icons-material/Star';
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Typography } from '@mui/material';
 
 const ProductDetails = () => {
@@ -43,6 +43,7 @@ const ProductDetails = () => {
   useEffect(() => {
     data_fetch();
     R_fetch();
+    // eslint-disable-next-line
   }, [])
 
 
@@ -67,7 +68,7 @@ const ProductDetails = () => {
                       elm.productImages.map((e) => {
                         return (
                           <>
-                            <img src={e.name} />
+                            <img src={e.name} alt='' />
                           </>
                         )
                       })
@@ -301,16 +302,16 @@ const ProductDetails = () => {
                                     <div className="mt-2">
                                     {
                                       ele.images.map((elemt)=>{
-                                        return <img style={{ borderRadius: "10%" }} src={elemt}  className="ng-star-inserted" />
+                                        return <img style={{ borderRadius: "10%" }} src={elemt} alt='' className="ng-star-inserted" />
                                       })
                                     }
                                     </div>
                                     <ul class="comnt-sec list-unstyled mt-2">
                                       <li className='d-inline-block'>
-                                        <a href="#">
+                                        <Link to="#">
                                           <ThumbUpOffAltIcon className='me-2' />
                                           <span>({ele.like_count})</span>
-                                        </a>
+                                        </Link>
                                       </li>
                                     </ul>
                                   </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import CopyrightIcon from '@mui/icons-material/Copyright';
+import {Link} from 'react-router-dom'
 import visa from "../../assets/images/icon/visa.png"
 const SubFooter = () => {
     return (
@@ -17,19 +18,19 @@ const SubFooter = () => {
                             <div className="payment-card-bottom">
                                 <ul>
                                     <li>
-                                        <a href="#"><img src={visa} alt="" /></a>
+                                        <Link to="#"><img src={visa} alt="" /></Link>
                                     </li>
                                     <li>
-                                        <a href="#"><img src={require('../../assets/images/icon/mastercard.png')} alt="" /></a>
+                                        <Link to="#"><img src={require('../../assets/images/icon/mastercard.png')} alt="" /></Link>
                                     </li>
                                     <li>
-                                        <a href="#"><img src={require('../../assets/images/icon/paypal.png')} alt="" /></a>
+                                        <Link to="#"><img src={require('../../assets/images/icon/paypal.png')} alt="" /></Link>
                                     </li>
                                     <li>
-                                        <a href="#"><img src={require('../../assets/images/icon/american-express.png')} alt="" /></a>
+                                        <Link to="#"><img src={require('../../assets/images/icon/american-express.png')} alt="" /></Link>
                                     </li>
                                     <li>
-                                        <a href="#"><img src={require('../../assets/images/icon/discover.png')} alt="" /></a>
+                                        <Link to="#"><img src={require('../../assets/images/icon/discover.png')} alt="" /></Link>
                                     </li>
                                 </ul>
                             </div>

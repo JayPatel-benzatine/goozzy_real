@@ -82,7 +82,7 @@ const SpecialCard = () => {
                                             <div className="front">
                                                 <Link to={`/productDetails/${elm.id}`} >
                                                     <img key={i} className="img-fluid lazy-loading  ng-star-inserted ng-lazyloaded"
-                                                        src={elm.productImages[0].name} />
+                                                       alt='' src={elm.productImages[0].name} />
                                                 </Link>
                                             </div>
 

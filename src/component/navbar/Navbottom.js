@@ -6,17 +6,17 @@ import { Link, NavLink } from 'react-router-dom'
 import { useRecoilValue, useRecoilState } from 'recoil'
 import { categoreyLists } from '../../Atom/Selector'
 import { categoreyList } from '../../Atom/Atom'
+import { useCart } from "react-use-cart";
 
 const NavBottom = () => {
     const Categories_List = useRecoilValue(categoreyLists);
     const [category, setCategorey] = useRecoilState(categoreyList);
-
+    const { totalUniqueItems }= useCart();
     useEffect(() => {
         setCategorey(Categories_List)
         // eslint-disable-next-line 
     }, [Categories_List])
 
-    // console.log(category);
 
     return (
         <>
@@ -45,12 +45,13 @@ const NavBottom = () => {
                                     </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/shop">SHOP</Link>
+                                    <NavLink  style={({ isActive }) => (isActive ? { color: '#7165e3' } : { color: 'grey' })}
+                                    className="nav-link" to="/shop">SHOP</NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                    <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
                                         CATAGORY
-                                    </a>
+                                    </Link>
                                     <ul className="dropdown-menu fade-up" >
                                         {
                                             category.map((elm, i) => {
@@ -65,13 +66,13 @@ const NavBottom = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                    <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
                                         ORDER
-                                    </a>
+                                    </Link>
                                     <ul className="dropdown-menu fade-up" >
-                                        <li><a className="dropdown-item" href="#">CART</a></li>
-                                        <li><a className="dropdown-item" href="#"> WISHLISTS</a></li>
-                                        <li><a className="dropdown-item" href="#"> MY ORDER</a></li>
+                                        <li><Link className="dropdown-item" to="/cart">CART</Link></li>
+                                        <li><Link className="dropdown-item" to="#"> WISHLISTS</Link></li>
+                                        <li><Link className="dropdown-item" to="#"> MY ORDER</Link></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -107,10 +108,11 @@ const NavBottom = () => {
                             </ul>
                         </div>
                         <div className="nav-item dropdown d-flex mb-1">
-                            <div className="delte d-flex align-items-center h-auto" data-toggle="dropdown">
+                         <Link to='/cart'>  <div className="delte d-flex align-items-center h-auto" data-toggle="dropdown">
                                 <LocalGroceryStoreOutlinedIcon />
-                                <span className="cart_qty_cls">0</span>
+                                <span className="cart_qty_cls">{totalUniqueItems}</span>
                             </div>
+                            </Link> 
                             <ul className="dropdown-menu fade-up cart_ul">
                                 <li><p className="dropdown-item"> Your cart is currently empty.</p></li>
                             </ul>

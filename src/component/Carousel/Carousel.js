@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Carousel.css'
-import { SliderList } from '../../Atom/Atom'
+import { SliderList,headerList } from '../../Atom/Atom'
 import { SliderLists } from '../../Atom/Selector'
 import { useRecoilState, useRecoilValue } from 'recoil';
+import { Link } from 'react-router-dom';
 const Carousel = () => {
     const Slider_List = useRecoilValue(SliderLists)
     const [slideData, setSlideData] = useRecoilState(SliderList)
     const [isHovering, setIsHovering] = useState(false);
-
+    const [upAtom , setUpAtom] = useRecoilState(headerList);
     useEffect(() => {
         setSlideData([Slider_List])
         // eslint-disable-next-line 
@@ -22,11 +23,11 @@ const Carousel = () => {
         setIsHovering(false);
     };
     return (
-        <div>
+        <div onMouseLeave={handleMouseOut}>
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
+                <div className="carousel-inner" onMouseOver={handleMouseOver}  >
                     {
-                        slideData.map((elm,i) => {
+                        slideData.map((elm, i) => {
                             return (<>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="2000">
@@ -34,22 +35,22 @@ const Carousel = () => {
                                         <div className="carousel-caption ">
                                             <h4>Welcome To Fashion</h4>
                                             <h1>{elm[0].name}</h1>
-                                            <button type="button" className="btn btn-primary btn_shop">Shop Now </button>
+                                            <Link to='/shop'><button type="button" onClick={() => setUpAtom({...upAtom ,category_id: "5" })} className="btn btn-primary btn_shop">Shop Now </button></Link>
                                         </div>
                                     </div>
                                     <div class="carousel-item" data-bs-interval="2000">
-                                    <img src={elm[1].image} class="d-block w-100" alt="..." />
+                                        <img src={elm[1].image} class="d-block w-100" alt="..." />
                                         <div className="carousel-caption ">
                                             <h4>Welcome To Fashion</h4>
                                             <h1>{elm[1].name}</h1>
-                                            <button type="button" className="btn btn-primary btn_shop">Shop Now </button>
+                                            <Link to='/shop'><button type="button" onClick={() => setUpAtom({...upAtom ,category_id: "6" })} className="btn btn-primary btn_shop">Shop Now </button></Link>
                                         </div>                                    </div>
                                     <div class="carousel-item" data-bs-interval="2000">
-                                    <img src={elm[2].image} class="d-block w-100" alt="..." />
+                                        <img src={elm[2].image} class="d-block w-100" alt="..." />
                                         <div className="carousel-caption ">
                                             <h4>Welcome To Fashion</h4>
                                             <h1>{elm[2].name}</h1>
-                                            <button type="button" className="btn btn-primary btn_shop">Shop Now </button>
+                                            <Link to='/shop'><button type="button" onClick={() => setUpAtom({...upAtom ,category_id: "8" })} className="btn btn-primary btn_shop">Shop Now </button></Link>
                                         </div>                                    </div>
                                 </div>
                             </>)

@@ -31,9 +31,7 @@ const AddressForm = ({statesClose}) => {
         setComman(e.target.value)
     }
    
-    const cancelForm = () => {
-        console.log('k');
-    }
+   
     const submitForm = (e) => {
         e.preventDefault();
 
